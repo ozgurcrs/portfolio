@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { PaperClip } from "./components/PaperClip";
 import data from "./data.json";
 function App() {
+  const [lang, setLang] = useState<any>("en");
+
   return (
     <>
       <div className="w-full h-screen flex justify-center items-center flex-col">
@@ -10,8 +13,29 @@ function App() {
           href="#experience"
           className="p-3 rounded-md text-black absolute bottom-10"
         >
-          Projects
+          {lang === "en" ? "Projects" : "Projeler"}
         </a>
+
+        <div className="w-full h-32 absolute top-0 flex justify-end mr-10  items-center">
+          <button
+            className={
+              lang === "tr"
+                ? "bg-black text-white p-1 rounded m-2"
+                : "p-1 rounded m-2"
+            }
+            onClick={() => setLang("tr")}
+          >
+            TR
+          </button>
+          <button
+            className={
+              lang === "en" ? "bg-black text-white p-1 rounded" : "p-1 rounded"
+            }
+            onClick={() => setLang("en")}
+          >
+            EN
+          </button>
+        </div>
       </div>
       <div
         id="experience"
@@ -21,7 +45,7 @@ function App() {
           <h5>Deliveryhero | Yemeksepeti</h5>
         </div>
 
-        {data.experience.map(({ label, detail }: any) => (
+        {data[lang].experience.map(({ label, detail }: any) => (
           <>
             <div className="text-white w-full md:w-[50%] ">
               <PaperClip label={label} />
