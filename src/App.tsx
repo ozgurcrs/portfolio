@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { PaperClip } from "./components/PaperClip";
-import data from "./data.json";
+import Data from "./data.json";
 function App() {
   const [lang, setLang] = useState<any>("en");
+  const [data, _] = useState<any>(Data);
 
   return (
     <>
