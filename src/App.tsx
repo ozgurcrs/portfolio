@@ -79,10 +79,6 @@ function App() {
         <a target="_blank" href="mailto:ozgurciris@gmail.com">
           Email
         </a>
-
-        <div className="absolute w-full bottom-8 p-2 flex justify-center items-center text-xl">
-          <a href="topHeader">Top</a>
-        </div>
       </div>
     </>
   );
