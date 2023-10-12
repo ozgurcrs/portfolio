@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <div className="w-full h-screen flex justify-center items-center flex-col">
-        <h5 className="text-7xl font-light">Özgür Çiriş</h5>
+        <h5 id="topHeader" className="text-7xl font-light">
+          Özgür Çiriş
+        </h5>
         <p className="p-5">Frontend Developer</p>
         <a
           href="#experience"
@@ -66,7 +68,7 @@ function App() {
 
       <div
         id="contact"
-        className="w-full h-screen flex justify-evenly items-center text-4xl"
+        className="w-full h-screen flex md:flex-row relative flex-col justify-evenly items-center text-4xl"
       >
         <a target="_blank" href="https://github.com/ozgurcrs">
           Github
@@ -77,6 +79,10 @@ function App() {
         <a target="_blank" href="mailto:ozgurciris@gmail.com">
           Email
         </a>
+
+        <div className="absolute w-full bottom-8 p-2 flex justify-center items-center text-xl">
+          <a href="topHeader">Top</a>
+        </div>
       </div>
     </>
   );
