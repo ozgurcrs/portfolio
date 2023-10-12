@@ -56,6 +56,27 @@ function App() {
             </div>
           </>
         ))}
+        <a
+          href="#contact"
+          className="w-full text-white flex justify-center items-center"
+        >
+          {lang === "en" ? "Contact" : "İletişim"}
+        </a>
+      </div>
+
+      <div
+        id="contact"
+        className="w-full h-screen flex justify-evenly items-center text-4xl"
+      >
+        <a target="_blank" href="https://github.com/ozgurcrs">
+          Github
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/ozgurcrs/">
+          Linkedin
+        </a>
+        <a target="_blank" href="mailto:ozgurciris@gmail.com">
+          Email
+        </a>
       </div>
     </>
   );
